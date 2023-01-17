@@ -206,7 +206,7 @@ body {
         transform: none;
     }
 
-    .product h2, p, ul li {
+    .product h2, .product p, .product ul li {
         font-size: 10px;
     }
     
