@@ -1,0 +1,217 @@
+body {
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-image: url("images/product-page-background.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(auto-fit, 1fr); */
+    /* grid-template-columns: repeat(auto-fit, 1fr); */
+    /* grid-template-rows: repeat(auto-fit, 1fr); */
+    /* grid-column-gap: 50px;
+    grid-row-gap: 50px; */
+}
+
+.logo a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 5px;
+}
+
+.navbar {
+    display: flex; /* Keeps logo and links in same line */
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.navbar ul li {
+    display: inline;
+    list-style: none;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.navbar ul li a:hover {
+    background: #ccc;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.search-nav input[type=text] {
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.search-nav button {
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.search-nav button:hover {
+    background: #ccc;
+}
+
+.search-nav button:active {
+    background: #949494;
+}
+
+
+.product {
+    overflow: hidden;
+    box-shadow: 12px 12px 12px 1px rgba(192, 192, 192);
+    background: #fff;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 60px;
+    /* margin-top: 50px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px; */
+    transition: all .2s ease-in-out;
+}
+
+.product h2, .product p, .product ul li {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    /*position: relative;
+    left: 20%;*/
+}
+
+.product:hover {
+    transform: scale(1.1);
+}
+
+.image {
+    width: 120px;
+    height: 200px;
+}
+
+.buyButton, .addCart {
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center; */
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.buyButton {
+    background: black;
+    color: white;
+}
+
+.addCart {
+    background: #3895D3;
+    color: white;
+}
+
+.main-footer {
+    background: #000;
+    color: #fff;
+    padding: 10px;
+}
+
+.main-footer .footer-header, .website-link, .bottom-footer {
+    text-align: center;
+    margin: auto;
+}
+
+.main-footer .website-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.main-footer .socials {
+    list-style: none;
+    display: flex; /* Moved social icons into a row */
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0; /* Removed padding on left of <ul> */
+    margin: auto;
+}
+
+.socials li {
+    padding: 1rem;
+}
+
+.socials a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+@media screen and (max-width: 800px) {
+    .navbar {
+        margin-left: 20px;
+    }
+
+    .searchbar {
+        margin: 5px 0 20px 50px; /* top right bottom left */
+    }
+
+    .navbar ul li {
+        font-size: 16px;
+    }
+
+    .navbar ul li a:hover {
+        background: #ccc;
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    .main {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        padding-bottom: 20px;
+    }
+
+    .image {
+        width: 50px;
+        height: 80px;
+    }
+
+    .product {
+        overflow: hidden;
+        box-shadow: 4px 4px 8px 1px rgba(192, 192, 192); /* Reduced box shadow px */
+        padding: 5px;
+        margin: 5px;
+        transition: none;
+    }
+
+    .product:hover {
+        transform: none;
+    }
+
+    .product h2, p, ul li {
+        font-size: 10px;
+    }
+    
+    .buyButton, .addCart {
+        margin: 3px;
+        font-size: 10px;
+    }
+}
